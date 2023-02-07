@@ -7,9 +7,104 @@
 }
 /* stylelint-enable */
 
-h1 {
-  color: orangered;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
   font-family: "MyFont", sans-serif;
-  font-size: 36px;
-  font-weight: bold;
+  font-size: 14px;
+}
+
+.flex {
+  display: flex;
+}
+
+header {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+
+main {
+  width: 100%;
+  max-width: 770px;
+  justify-content: center;
+  gap: 5px;
+  margin: 0 auto;
+}
+
+main section.player-scores {
+  width: 50%;
+  flex-direction: column;
+  padding: 0 5px 0 20px;
+}
+
+main section.player-scores div.player-scores {
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+main section.player-scores ul.player-scores {
+  list-style-type: none;
+  border: 2px solid #000;
+  padding: 5px 0 5px 0;
+}
+
+main section.player-scores ul.player-scores li.player-scores {
+  padding: 5px 0 5px 5px;
+}
+
+main section.player-scores ul.player-scores li.player-scores:nth-child(even) {
+  background-color: #e4e2e2;
+}
+
+main section.add-score {
+  width: 50%;
+  flex-direction: column;
+  padding: 0 20px 0 5px;
+}
+
+main section.add-score h2.add-score {
+  margin-bottom: 20px;
+}
+
+main section.add-score form.add-score {
+  width: 100%;
+  flex-direction: column;
+}
+
+main section.add-score form.add-score input[type="text"] {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+main section.add-score form.add-score input[type="submit"] {
+  width: 50%;
+  margin-bottom: 10px;
+  align-self: flex-end;
+}
+
+@media only screen and (max-width: 768px) {
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  main section.player-scores div.player-scores {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 30px;
+  }
+
+  main section.add-score h2.add-score {
+    margin-bottom: 50px;
+  }
 }
