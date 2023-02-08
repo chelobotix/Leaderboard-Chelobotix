@@ -1,4 +1,4 @@
-import { addPlayerAPI, getPlayersAPI } from './apiRequest';
+import { addPlayerAPI, getPlayersAPI } from './apiRequest.js';
 
 export default class Player {
   #gameId;
@@ -13,4 +13,5 @@ export default class Player {
   addPlayer = (player) => addPlayerAPI(player, this.#requestURL);
 
   getPlayers = () => getPlayersAPI(this.#requestURL)
+    .then((response) => response)
 }

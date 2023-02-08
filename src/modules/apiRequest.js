@@ -15,9 +15,8 @@ const addPlayerAPI = async (player, url) => {
 };
 
 const getPlayersAPI = async (url) => {
-  const scoresArray = await fetch(url)
-    .then((response) => response.json());
-
+  const response = await fetch(url);
+  const scoresArray = await response.json();
   return scoresArray;
 };
 

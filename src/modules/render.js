@@ -1,19 +1,30 @@
 import Player from './players.js';
 
+const UpdateScores = (player) => {
+  player.getPlayers()
+    .then((response) => {
+      const leaderBoard = response.result.sort((a, b) => b.score - a.score);
+      let aux = '';
+      leaderBoard.forEach((elem) => {
+        aux += `<li class="player-scores">${elem.user} : ${elem.score}</li>`;
+      });
+      document.querySelector('ul.player-scores').innerHTML = aux;
+    });
+};
+
 const renderScore = () => {
   const player = new Player(
-    '8K44VNwh9ZuC6E3ZxTPc',
+    'N6LN8OdSQs7L7qxDSROl',
     'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/',
   );
+  // fill the scores table
+  UpdateScores(player);
 
-
-  player.getPlayers()
-    .then((response) => console.log(response));
-
+  /* -------------------------------------------------------------------------- */
+  /*                               Event listener                               */
+  /* -------------------------------------------------------------------------- */
   const form = document.querySelector('#scoreForm');
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
+  form.addEventListener('submit', () => {
     const objPlayer = {
       user: form.elements.name.value,
       score: form.elements.score.value,
@@ -23,11 +34,10 @@ const renderScore = () => {
         document.querySelector('#msg').textContent = resolve;
       });
   });
-  // let aux = '';
-  // getScoreArray().forEach((elem) => {
-  //   aux += `<li class="player-scores">${elem.fName} : ${elem.points}</li>`;
-  // });
-  // document.querySelector('ul.player-scores').innerHTML = aux;
+
+  document.querySelector('#btnRefresh').addEventListener('click', () => {
+    UpdateScores(player);
+  });
 };
 
 export default renderScore;
