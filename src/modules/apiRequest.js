@@ -14,8 +14,11 @@ const addPlayerAPI = async (player, url) => {
   return newPlayer.result;
 };
 
-// const getPlayers = (url) => {
-//   const requestURL = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameId}/scores`;
-// };
+const getPlayersAPI = async (url) => {
+  const scoresArray = await fetch(url)
+    .then((response) => response.json());
 
-export default addPlayerAPI;
+  return scoresArray;
+};
+
+export { addPlayerAPI, getPlayersAPI };

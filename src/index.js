@@ -1,4 +1,4 @@
 import './style.css';
-import loadScore from './modules/loadScores.js';
+import renderScore from './modules/render.js';
 
-loadScore();
+renderScore();
