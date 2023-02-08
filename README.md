@@ -56,6 +56,7 @@
 
 - **LeaderBoard Table**
 - **Add Score Form**
+- **Send and receive data from an API**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -91,7 +92,6 @@ Run the app with:
 npm start
 ```
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHOR -->
@@ -111,7 +111,7 @@ npm start
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **API request**
+- [ ] **Css Style**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
