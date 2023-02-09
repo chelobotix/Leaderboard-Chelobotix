@@ -56,12 +56,13 @@
 
 - **LeaderBoard Table**
 - **Add Score Form**
+- **Send and receive data from an API**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🧑🏻‍💻 Live Demo <a name="live-demo"></a>
 
-<a href="https://chelobotix.github.io/Leaderboard-Chelobotix/dist">Visit the Live Demo</a>
+<a href="https://chelobotix.github.io/Leaderboard-Chelobotix/dist/">Visit the Live Demo</a>
 <br/>
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -91,7 +92,6 @@ Run the app with:
 npm start
 ```
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHOR -->
@@ -111,7 +111,7 @@ npm start
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **API request**
+- [ ] **Css Style**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -144,8 +144,8 @@ My mother. Let's play to the end together ❤️ with 🧠
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](<a href="https://github.com/chelobotix/Leaderboard-Chelobotix/blob/project-setup/LICENSE">License</a>) licensed.
+This project is [MIT](<a href="https://github.com/chelobotix/Leaderboard-Chelobotix/blob/api-request/LICENSE">License</a>) licensed.
 
-<a href="https://github.com/chelobotix/Leaderboard-Chelobotix/blob/project-setup/LICENSE">License</a>
+<a href="https://github.com/chelobotix/Leaderboard-Chelobotix/blob/api-request/LICENSE">License</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

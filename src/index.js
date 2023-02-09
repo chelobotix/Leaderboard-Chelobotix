@@ -1,4 +1,6 @@
+import './assets/fonts/SofiaSans-Regular.ttf';
+import './assets/fonts/SofiaSans-Bold.ttf';
 import './style.css';
-import loadScore from './modules/loadScores.js';
+import renderScore from './modules/render.js';
 
-loadScore();
+renderScore();
