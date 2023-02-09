@@ -33,6 +33,8 @@ const renderScore = () => {
     player.addPlayer(objPlayer)
       .then((resolve) => {
         document.querySelector('#msg').textContent = resolve;
+        form.elements.name.value = '';
+        form.elements.score.value = '';
       });
   });
 
