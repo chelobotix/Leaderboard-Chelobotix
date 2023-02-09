@@ -24,7 +24,8 @@ const renderScore = () => {
   /*                               Event listener                               */
   /* -------------------------------------------------------------------------- */
   const form = document.querySelector('#scoreForm');
-  form.addEventListener('submit', () => {
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
     const objPlayer = {
       user: form.elements.name.value,
       score: form.elements.score.value,
