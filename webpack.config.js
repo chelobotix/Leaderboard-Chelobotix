@@ -1,5 +1,5 @@
-const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 module.exports = {
   mode: 'development',
@@ -7,45 +7,41 @@ module.exports = {
   devServer: {
     static: './dist',
   },
+  entry: './src/index.js',
+  output: {
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'dist'),
+    clean: true,
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'index.html'),
     }),
   ],
-  optimization: {
-    runtimeChunk: 'single',
-  },
   module: {
     rules: [
       {
-        test: /\.css$/i,
+        test: /\.css/,
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(gif|png|jpe?g)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'assets/images/',
-            },
-          },
-        ],
+        test: /\.html$/i,
+        use: 'html-loader',
+      },
+      {
+        test: /\.(png|jpg)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[name]-[hash][ext]',
+        },
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'fonts/[name][ext][query]',
-          outputPath: 'assets/fonts/',
+          filename: 'fonts/[name]-[hash][ext]',
         },
       },
     ],
-  },
-  output: {
-    filename: '[name].js',
-    path: path.resolve(__dirname, 'dist'),
-    clean: true,
   },
 };
