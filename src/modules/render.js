@@ -1,4 +1,6 @@
 import Player from './players.js';
+import ringAnimation from './animation.js';
+import src from '../assets/images/user.png';
 
 const UpdateScores = (player) => {
   player.getPlayers()
@@ -6,9 +8,13 @@ const UpdateScores = (player) => {
       const leaderBoard = response.result.sort((a, b) => b.score - a.score);
       let aux = '';
       leaderBoard.forEach((elem) => {
-        aux += `<li class="player-scores">${elem.user} : ${elem.score}</li>`;
+        aux += `<li class="player-scores flex">
+        <img src="${src}" class="user-img" />
+        <p class="p-user">${elem.user} : ${elem.score}</p>
+        </li>`;
       });
       document.querySelector('ul.player-scores').innerHTML = aux;
+      ringAnimation();
     });
 };
 
