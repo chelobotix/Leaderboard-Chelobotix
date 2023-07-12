@@ -18,7 +18,7 @@ const UpdateScores = (player) => {
 };
 
 const renderScore = () => {
-  const player = new Player("fadHZHQsGimScUUX6oii", "https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/");
+  const player = new Player("deNFHlp0Swqn9mTvt6Gz", "https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/");
   // fill the scores table
   UpdateScores(player);
 
