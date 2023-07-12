@@ -62,7 +62,7 @@
 
 ## 🧑🏻‍💻 Live Demo <a name="live-demo"></a>
 
-<a href="https://chelobotix.github.io/Leaderboard-Chelobotix/dist/">Visit the Live Demo</a>
+<a href="https://develop--whimsical-peony-71ff5a.netlify.app/">Visit the Live Demo</a>
 <br/>
 
 ## 💻 Getting Started <a name="getting-started"></a>
