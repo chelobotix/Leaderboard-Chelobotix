@@ -1,4 +1,4 @@
 import './style.css';
-import './assets/images/Logo_Barrenechea.png';
+import renderScore from './modules/render.js';
 
-document.querySelector('h1').textContent = 'Works';
+renderScore();

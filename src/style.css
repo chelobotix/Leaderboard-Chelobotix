@@ -1,15 +1,213 @@
+.flex {
+  display: flex;
+}
+
 /* stylelint-disable */
 @font-face {
   font-family: "MyFont";
-  src: url(".//assets/fonts/SofiaSans-Regular.ttf") format("truetype"),
-    url("./assets/fonts/SofiaSans-Bold.ttf") format("truetype");
+  src: url("./assets/fonts/RingbearerMedium-51mgZ.ttf") format("truetype");
   font-weight: normal;
 }
 /* stylelint-enable */
 
-h1 {
-  color: orangered;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
   font-family: "MyFont", sans-serif;
-  font-size: 36px;
-  font-weight: bold;
+  font-size: 14px;
+  scrollbar-width: auto;
+  scrollbar-color: #b7ac34 #5c1014;
+}
+
+/* ===== Scrollbar CSS ===== */
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #5c1014;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #b7ac34;
+  border-radius: 10px;
+  border: 3px double #fff;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("./assets/images/bg.jpg") no-repeat;
+  color: #fff;
+}
+
+header {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 4rem;
+  color: #e0f009;
+  text-shadow: 2px 2px 3px #000;
+  white-space: nowrap;
+}
+
+h2 {
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+
+button,
+input[type="submit"] {
+  background-color: #fbeca3;
+  color: #5c1014;
+  text-align: center;
+  margin: 5px;
+}
+
+main {
+  width: 1400px;
+  height: 77%;
+  justify-content: center;
+  gap: 5px;
+  background: url("./assets/images/gandalf.jpg") no-repeat;
+  background-size: cover;
+  border-radius: 14px;
+  opacity: 0.9;
+  padding-bottom: 10px;
+}
+
+main section.player-scores {
+  width: 50%;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 5px 0 5px;
+  margin-top: 5px;
+}
+
+main section.player-scores div.player-scores {
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+main section.player-scores ul.player-scores {
+  list-style-type: none;
+  padding: 5px 0 5px 0;
+  overflow-x: auto;
+}
+
+main section.player-scores ul.player-scores li.player-scores {
+  align-items: center;
+  padding: 5px 0 5px 5px;
+}
+
+main section.player-scores ul.player-scores li.player-scores:hover {
+  background-color: rgba(225, 240, 9, 0.315);
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+}
+
+@keyframes ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animationRing {
+  animation: ring 2s linear infinite;
+}
+
+main section.player-scores ul.player-scores li.player-scores img.user-img {
+  width: 50px;
+}
+
+main section.player-scores ul.player-scores li.player-scores p.p-user {
+  font-size: 2rem;
+}
+
+main section.add-score {
+  width: 20%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px 0 5px;
+  margin-top: 5px;
+}
+
+main section.add-score form.add-score {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
+main section.add-score form.add-score input[type="text"],
+main section.add-score form.add-score input[type="number"],
+main section.add-score form.add-score input[type="submit"] {
+  width: 70%;
+  height: 30px;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    background-size: cover;
+    background-repeat: repeat;
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    white-space: normal;
+  }
+
+  header {
+    height: auto;
+  }
+
+  main {
+    width: 95%;
+    height: 77%;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  main section.player-scores {
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.781);
+  }
+
+  main section.player-scores div.player-scores {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 5px;
+  }
+
+  main section.player-scores ul.player-scores li.player-scores img.user-img {
+    width: 30px;
+  }
+
+  main section.player-scores ul.player-scores li.player-scores p.p-user {
+    font-size: 1rem;
+  }
+
+  main section.add-score {
+    width: 50%;
+    flex-direction: column;
+  }
 }
